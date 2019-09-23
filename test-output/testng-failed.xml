@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [restassuredtestsuite]">
+  <test thread-count="5" name="restassuredtests">
+    <classes>
+      <class name="com.employeeapi.testcases.TC001_Get_All_Employees"/>
+      <class name="com.employeeapi.testcases.TC003_Post_Employee_Record"/>
+      <class name="com.employeeapi.testcases.TC004_Put_Employee_Record"/>
+      <class name="com.employeeapi.testcases.TC005_Delete_Employee_Record"/>
+    </classes>
+  </test> <!-- restassuredtests -->
+  <test name="restassuredtests(failed)">
+    <classes>
+      <class name="com.employeeapi.testcases.TC005_Delete_Employee_Record">
+        <methods>
+          <include name="deleteRecord"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.employeeapi.testcases.TC005_Delete_Employee_Record -->
+      <class name="com.employeeapi.testcases.TC004_Put_Employee_Record">
+        <methods>
+          <include name="modifyEmployee"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.employeeapi.testcases.TC004_Put_Employee_Record -->
+      <class name="com.employeeapi.testcases.TC003_Post_Employee_Record">
+        <methods>
+          <include name="setup"/>
+          <include name="createEmployee"/>
+        </methods>
+      </class> <!-- com.employeeapi.testcases.TC003_Post_Employee_Record -->
+      <class name="com.employeeapi.testcases.TC001_Get_All_Employees">
+        <methods>
+          <include name="checkServerType"/>
+          <include name="afterClass"/>
+          <include name="checkContentLength"/>
+          <include name="setup"/>
+          <include name="getAllEmployees"/>
+          <include name="checkResponseTime"/>
+        </methods>
+      </class> <!-- com.employeeapi.testcases.TC001_Get_All_Employees -->
+    </classes>
+  </test> <!-- restassuredtests(failed) -->
+</suite> <!-- Failed suite [restassuredtestsuite] -->
